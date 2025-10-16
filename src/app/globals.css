@@ -1,26 +1,225 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Base styles */
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply bg-white text-gray-900 font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ondalis-ocean rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-ondalis-turquoise;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Component styles */
+@layer components {
+  /* Button variants */
+  .btn-primary {
+    @apply bg-ondalis-turquoise hover:bg-ondalis-ocean text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-ondalis-turquoise text-ondalis-turquoise hover:bg-ondalis-turquoise hover:text-white font-medium px-6 py-3 rounded-lg transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border border-ondalis-ocean text-ondalis-ocean hover:bg-ondalis-ocean hover:text-white font-medium px-4 py-2 rounded-md transition-all duration-300;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+  }
+
+  .card-service {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden group;
+  }
+
+  /* Section styles */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-dark {
+    @apply bg-ondalis-deep text-white;
+  }
+
+  .section-light {
+    @apply bg-gray-50;
+  }
+
+  /* Container styles */
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Typography */
+  .heading-1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold font-playfair leading-tight;
+  }
+
+  .heading-3 {
+    @apply text-2xl md:text-3xl font-semibold font-playfair leading-tight;
+  }
+
+  .heading-4 {
+    @apply text-xl md:text-2xl font-semibold font-inter leading-tight;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  .body-text {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  /* Form styles */
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ondalis-turquoise focus:border-ondalis-turquoise transition-colors duration-300 bg-white;
+  }
+
+  .form-textarea {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ondalis-turquoise focus:border-ondalis-turquoise transition-colors duration-300 bg-white resize-none;
+  }
+
+  .form-select {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ondalis-turquoise focus:border-ondalis-turquoise transition-colors duration-300 bg-white appearance-none;
+  }
+
+  /* Navigation styles */
+  .nav-link {
+    @apply text-white hover:text-ondalis-turquoise transition-colors duration-300 font-medium relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-ondalis-turquoise transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Gradient backgrounds */
+  .gradient-ondalis {
+    background: linear-gradient(135deg, #02253b 0%, #003755 50%, #007088 100%);
+  }
+
+  .gradient-ondalis-light {
+    background: linear-gradient(135deg, #007088 0%, #00c5cb 100%);
+  }
+
+  /* Animation utilities */
+  .fade-in {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .slide-in-left {
+    @apply opacity-0 -translate-x-8 transition-all duration-700 ease-out;
+  }
+
+  .slide-in-left.visible {
+    @apply opacity-100 translate-x-0;
+  }
+
+  .slide-in-right {
+    @apply opacity-0 translate-x-8 transition-all duration-700 ease-out;
+  }
+
+  .slide-in-right.visible {
+    @apply opacity-100 translate-x-0;
+  }
+
+  /* Hero section specific styles */
+  .hero-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(2, 37, 59, 0.8) 0%,
+      rgba(0, 55, 85, 0.7) 50%,
+      rgba(0, 112, 136, 0.6) 100%
+    );
+  }
+
+  /* Service card hover effects */
+  .service-card-image {
+    @apply transition-transform duration-500 group-hover:scale-110;
+  }
+
+  /* Loading animations */
+  .pulse-ondalis {
+    animation: pulse-ondalis 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-ondalis {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* Focus styles for accessibility */
+  .focus-ondalis {
+    @apply focus:outline-none focus:ring-2 focus:ring-ondalis-turquoise focus:ring-offset-2;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Custom spacing */
+  .space-y-section > * + * {
+    @apply mt-16 md:mt-24;
+  }
+
+  /* Backdrop blur utilities */
+  .backdrop-blur-ondalis {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 }
