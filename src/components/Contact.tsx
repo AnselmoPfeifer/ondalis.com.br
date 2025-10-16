@@ -213,7 +213,7 @@ Aguardo retorno para agendamento. Obrigado!`;
                   </div>
                   <div>
                     <p className="text-white/80">Telefone</p>
-                    <p className="text-white font-semibold">(11) 99999-9999</p>
+                    <p className="text-white font-semibold">(67) 99999-9999</p>
                   </div>
                 </div>
 
@@ -224,7 +224,7 @@ Aguardo retorno para agendamento. Obrigado!`;
                   <div>
                     <p className="text-white/80">E-mail</p>
                     <p className="text-white font-semibold">
-                      contato@spaondalis.com
+                      contato@ondalis.com.br
                     </p>
                   </div>
                 </div>
@@ -236,11 +236,11 @@ Aguardo retorno para agendamento. Obrigado!`;
                   <div>
                     <p className="text-white/80">Endereço</p>
                     <p className="text-white font-semibold">
-                      Rua das Flores, 123
+                      Rua Exemplo, 123
                       <br />
-                      Jardim das Palmeiras
+                      Centro
                       <br />
-                      São Paulo - SP, 01234-567
+                      Campo Grande - MS, 79000-000
                     </p>
                   </div>
                 </div>

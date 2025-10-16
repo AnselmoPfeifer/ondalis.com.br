@@ -10,39 +10,52 @@ const Services = () => {
 
   const services = [
     {
-      title: "Massagem Relaxante",
-      description: "Ideal para aliviar o estresse e tensões do dia a dia.",
+      title: "Massagem Relaxante Corporal",
+      description:
+        "Toques suaves e ritmados que aliviam o estresse, reduzem a tensão muscular e promovem equilíbrio entre corpo e mente. Uma experiência perfeita para quem busca tranquilidade e descanso profundo.",
       image:
         "https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      icon: "🧘‍♀️",
-    },
-    {
-      title: "Drenagem Linfática",
-      description: "Melhora a circulação e reduz inchaços naturalmente.",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       icon: "💆‍♀️",
     },
     {
       title: "Massagem Terapêutica",
-      description: "Alívio de dores musculares e pontos de tensão.",
+      description:
+        "Técnica focada no alívio de dores musculares e tensões localizadas. Utiliza movimentos firmes e precisos para restaurar o equilíbrio corporal, proporcionando bem-estar e leveza imediata.",
       image:
         "https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      icon: "🩹",
+      icon: "🪶",
     },
     {
-      title: "Massagem com Pedras Quentes",
-      description: "Relaxamento profundo e bem-estar através do calor.",
+      title: "Massagem + Liberação Miofascial",
+      description:
+        "Combina a massagem terapêutica com a liberação de pontos de tensão nas fáscias musculares. Ideal para quem sente rigidez, cansaço físico ou pratica atividades intensas. Restaura a mobilidade e reduz dores crônicas.",
+      image:
+        "https://images.unsplash.com/photo-1519824145371-296894a0daa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      icon: "⚡",
+    },
+    {
+      title: "Massagem Relaxante + Pedras Quentes",
+      description:
+        "O calor das pedras vulcânicas aliado a toques relaxantes promove uma sensação única de conforto e renovação. Essa técnica estimula a circulação, alivia tensões e equilibra as energias do corpo.",
       image:
         "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       icon: "🔥",
     },
     {
-      title: "Reflexologia Podal",
-      description: "Estimula pontos de energia e equilíbrio corporal.",
+      title: "Head Massage (Cabeça e Cervical)",
+      description:
+        "Terapia focada na cabeça, couro cabeludo e região cervical. Melhora a circulação, reduz o cansaço mental e promove clareza e leveza — perfeita para quem busca aliviar o estresse do dia a dia.",
       image:
-        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      icon: "🦶",
+        "https://images.unsplash.com/photo-1591343395902-bbd0e3d6fe39?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      icon: "🧘",
+    },
+    {
+      title: "Ondalis Experience (Exclusiva)",
+      description:
+        "A experiência assinatura do SPA Ondalis. Uma combinação harmoniosa de técnicas relaxantes, aromaterapia e cuidado personalizado. Um ritual completo de renovação e equilíbrio para corpo, mente e alma.",
+      image:
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      icon: "🌊",
     },
   ];
 

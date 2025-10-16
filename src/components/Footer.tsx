@@ -112,18 +112,18 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-ondalis-turquoise" />
-                <span className="text-white/80">(11) 99999-9999</span>
+                <span className="text-white/80">(67) 99999-9999</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-ondalis-turquoise" />
-                <span className="text-white/80">contato@spaondalis.com</span>
+                <span className="text-white/80">contato@ondalis.com.br</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="text-ondalis-turquoise mt-1" />
                 <div className="text-white/80">
-                  <p>Rua das Flores, 123</p>
-                  <p>Jardim das Palmeiras</p>
-                  <p>São Paulo - SP, 01234-567</p>
+                  <p>Rua Exemplo, 123</p>
+                  <p>Centro</p>
+                  <p>Campo Grande - MS, 79000-000</p>
                 </div>
               </div>
             </div>
