@@ -1,59 +1,72 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import {
+  Inter,
+  Playfair_Display,
+  Poppins,
+  Source_Sans_3,
+  Crimson_Text,
+} from "next/font/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
-import Script from "next/script";
 
+// Primary sans-serif font - Modern, clean, highly readable
 const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,
 });
 
-const lora = Lora({
-  variable: "--font-lora",
+// Elegant serif for headings - Sophisticated and luxurious
+const playfair = Playfair_Display({
   subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  preload: true,
+  weight: ["400", "500", "600", "700"],
 });
+
+// Modern sans-serif alternative - Clean and contemporary
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+// Professional body text - Excellent readability
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-source-sans",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+// Elegant serif for special headings - Refined and classic
+const crimsonText = Crimson_Text({
+  subsets: ["latin"],
+  variable: "--font-crimson",
+  display: "swap",
+  weight: ["400", "600", "700"],
+});
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
-  title: "SPA Ondalis - Equilíbrio e bem-estar em cada toque",
+  metadataBase: new URL("https://ondalis.com.br"),
+  title: "SPA Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
   description:
-    "Descubra o poder do relaxamento no SPA Ondalis. Massagens terapêuticas, drenagem linfática, reflexologia e muito mais. Agende sua sessão de bem-estar.",
+    "O SPA Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, pedras quentes, reflexologia e muito mais em um ambiente de conforto e harmonia. Agende sua experiência Ondalis.",
   keywords:
-    "spa, massagem, relaxamento, bem-estar, terapias, drenagem linfática, reflexologia, pedras quentes",
+    "SPA Campo Grande MS, massagem relaxante, massagem com pedras quentes, reflexologia podal, bem-estar Campo Grande, relaxamento, spa de luxo, spa Ondalis, spa Campo Grande, Ondalis MS, massagem Campo Grande, terapias Campo Grande, spa MS, relaxamento Campo Grande",
   authors: [{ name: "SPA Ondalis" }],
   creator: "SPA Ondalis",
   publisher: "SPA Ondalis",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL("https://spaondalis.com"),
   alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "SPA Ondalis - Equilíbrio e bem-estar em cada toque",
-    description:
-      "Descubra o poder do relaxamento no SPA Ondalis. Massagens terapêuticas, drenagem linfática, reflexologia e muito mais.",
-    url: "https://spaondalis.com",
-    siteName: "SPA Ondalis",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "SPA Ondalis - Ambiente relaxante",
-      },
-    ],
-    locale: "pt_BR",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "SPA Ondalis - Equilíbrio e bem-estar em cada toque",
-    description:
-      "Descubra o poder do relaxamento no SPA Ondalis. Massagens terapêuticas, drenagem linfática, reflexologia e muito mais.",
-    images: ["/og-image.jpg"],
+    canonical: "https://ondalis.com.br",
   },
   robots: {
     index: true,
@@ -66,55 +79,68 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "SPA Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
+    description:
+      "O SPA Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, pedras quentes, reflexologia e muito mais em um ambiente de conforto e harmonia. Agende sua experiência Ondalis.",
+    url: "https://ondalis.com.br",
+    siteName: "SPA Ondalis",
+    images: [
+      {
+        url: "https://ondalis.com.br/images/social.png",
+        width: 1200,
+        height: 630,
+        alt: "SPA Ondalis Campo Grande MS - Massagens e Bem-estar",
+        type: "image/png",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SPA Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
+    description:
+      "O SPA Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, pedras quentes, reflexologia e muito mais em um ambiente de conforto e harmonia. Agende sua experiência Ondalis.",
+    images: ["/images/social.png"],
+    creator: "@spaondalis",
+    site: "@spaondalis",
+  },
+  other: {
+    "linkedin:owner": "spa-ondalis",
+    "linkedin:title":
+      "SPA Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
+    "linkedin:description":
+      "O SPA Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, pedras quentes, reflexologia e muito mais em um ambiente de conforto e harmonia. Agende sua experiência Ondalis.",
+    "linkedin:image": "/images/social.png",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="pt-BR">
-      <head>
-        {/* Google Analytics */}
-        {process.env.NEXT_PUBLIC_GTAG && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTAG}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GTAG}');
-              `}
-            </Script>
-          </>
-        )}
-
-        {/* Facebook Pixel */}
-        {process.env.NEXT_PUBLIC_FB_PIXEL && (
-          <Script id="facebook-pixel" strategy="afterInteractive">
-            {`
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${process.env.NEXT_PUBLIC_FB_PIXEL}');
-              fbq('track', 'PageView');
-            `}
-          </Script>
-        )}
-      </head>
       <body
-        className={`${inter.variable} ${lora.variable} antialiased font-sans`}
+        className={`${inter.variable} ${playfair.variable} ${poppins.variable} ${sourceSans.variable} ${crimsonText.variable}`}
       >
+        <GoogleTagManager
+          gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID ?? ""}
+        />
+        <GoogleAnalytics
+          gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ""}
+        />
+        {/* Additional GTag ID if needed */}
+        {process.env.NEXT_PUBLIC_GTAG && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GTAG} />
+        )}
         {children}
       </body>
     </html>
