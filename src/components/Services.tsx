@@ -46,7 +46,7 @@ const Services = () => {
       description:
         "Terapia focada na cabeça, couro cabeludo e região cervical. Melhora a circulação, reduz o cansaço mental e promove clareza e leveza — perfeita para quem busca aliviar o estresse do dia a dia.",
       image:
-        "https://images.unsplash.com/photo-1591343395902-bbd0e3d6fe39?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       icon: "🧘",
     },
     {
@@ -60,7 +60,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" ref={ref} className="py-20 bg-ondalis-deep">
+    <section id="services" ref={ref} className="py-20 bg-ondalis-navy">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

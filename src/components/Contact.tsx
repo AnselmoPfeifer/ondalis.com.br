@@ -41,7 +41,7 @@ Telefone: ${formData.phone}
 
 *Informações Adicionais:*
 Principal queixa: ${formData.complaint}
-Objetivo: ${formData.goal}
+Serviço de interesse: ${formData.goal}
 
 Aguardo retorno para agendamento. Obrigado!`;
 
@@ -52,7 +52,7 @@ Aguardo retorno para agendamento. Obrigado!`;
   };
 
   return (
-    <section id="contact" ref={ref} className="py-20 bg-ondalis-deep">
+    <section id="contact" ref={ref} className="py-20 bg-ondalis-navy">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -164,7 +164,7 @@ Aguardo retorno para agendamento. Obrigado!`;
                   htmlFor="goal"
                   className="block text-sm font-medium text-ondalis-deep mb-2"
                 >
-                  Você busca relaxar, aliviar dores ou renovar suas energias? *
+                  Qual serviço você tem interesse? *
                 </label>
                 <select
                   id="goal"
@@ -174,11 +174,26 @@ Aguardo retorno para agendamento. Obrigado!`;
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ondalis-turquoise focus:border-transparent transition-all duration-300"
                 >
-                  <option value="">Selecione uma opção</option>
-                  <option value="relaxar">Relaxar</option>
-                  <option value="aliviar-dores">Aliviar dores</option>
-                  <option value="renovar-energias">Renovar energias</option>
-                  <option value="todos">Todos os anteriores</option>
+                  <option value="">Selecione um serviço</option>
+                  <option value="Massagem Relaxante Corporal">
+                    Massagem Relaxante Corporal
+                  </option>
+                  <option value="Massagem Terapêutica">
+                    Massagem Terapêutica
+                  </option>
+                  <option value="Massagem + Liberação Miofascial">
+                    Massagem + Liberação Miofascial
+                  </option>
+                  <option value="Massagem Relaxante + Pedras Quentes">
+                    Massagem Relaxante + Pedras Quentes
+                  </option>
+                  <option value="Head Massage (Cabeça e Cervical)">
+                    Head Massage (Cabeça e Cervical)
+                  </option>
+                  <option value="Ondalis Experience (Exclusiva)">
+                    Ondalis Experience (Exclusiva)
+                  </option>
+                  <option value="Ainda não sei">Ainda não sei</option>
                 </select>
               </div>
 
@@ -236,11 +251,9 @@ Aguardo retorno para agendamento. Obrigado!`;
                   <div>
                     <p className="text-white/80">Endereço</p>
                     <p className="text-white font-semibold">
-                      Rua Exemplo, 123
+                      Rua Rui Barbosa, 900
                       <br />
-                      Centro
-                      <br />
-                      Campo Grande - MS, 79000-000
+                      Campo Grande - MS
                     </p>
                   </div>
                 </div>

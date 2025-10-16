@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,11 +46,16 @@ const Header = () => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-3 cursor-pointer"
+            onClick={() => scrollToSection("home")}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-ondalis-turquoise to-ondalis-ocean rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">O</span>
-            </div>
+            <Image
+              src="/images/Ícone-2.png"
+              alt="SPA Ondalis Logo"
+              width={100}
+              height={100}
+              className="w-22 h-22 object-contain"
+            />
             <span className="text-xl font-bold text-white">SPA Ondalis</span>
           </motion.div>
 

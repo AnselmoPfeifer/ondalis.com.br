@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Phone, Mail, MapPin, Clock } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -22,10 +23,14 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-1"
           >
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-ondalis-turquoise to-ondalis-ocean rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">O</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-4">
+              <Image
+                src="/images/Ícone-2.png"
+                alt="SPA Ondalis Logo"
+                width={50}
+                height={50}
+                className="w-12 h-12 object-contain"
+              />
               <span className="text-xl font-bold">SPA Ondalis</span>
             </div>
             <p className="text-white/80 leading-relaxed mb-6">
@@ -121,9 +126,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="text-ondalis-turquoise mt-1" />
                 <div className="text-white/80">
-                  <p>Rua Exemplo, 123</p>
-                  <p>Centro</p>
-                  <p>Campo Grande - MS, 79000-000</p>
+                  <p>Rua Rui Barbosa, 900</p>
+                  <p>Campo Grande - MS</p>
                 </div>
               </div>
             </div>
