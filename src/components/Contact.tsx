@@ -269,8 +269,7 @@ Aguardo retorno para agendamento. Obrigado!`;
               </h4>
               <div className="space-y-2 text-white/80">
                 <p>Segunda a Sexta: 8h às 20h</p>
-                <p>Sábado: 8h às 18h</p>
-                <p>Domingo: 9h às 16h</p>
+                <p>Sábado: 8h às 16h</p>
               </div>
             </div>
           </motion.div>
