@@ -144,9 +144,8 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Clock size={18} className="text-ondalis-turquoise" />
                 <div className="text-white/80">
-                  <p>Seg - Sex: 8h às 20h</p>
-                  <p>Sáb: 8h às 18h</p>
-                  <p>Dom: 9h às 16h</p>
+                  <p>Seg - Sex: 8h às 19:30h</p>
+                  <p>Sáb: 8h às 16h</p>
                 </div>
               </div>
             </div>

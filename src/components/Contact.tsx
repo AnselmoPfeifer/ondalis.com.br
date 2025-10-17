@@ -391,7 +391,7 @@ Aguardo retorno para agendamento. Obrigado!`;
                 Horários de Funcionamento
               </h4>
               <div className="space-y-2 text-white/80">
-                <p>Segunda a Sexta: 8h às 20h</p>
+                <p>Segunda a Sexta: 8h às 19:30h</p>
                 <p>Sábado: 8h às 16h</p>
               </div>
             </div>
