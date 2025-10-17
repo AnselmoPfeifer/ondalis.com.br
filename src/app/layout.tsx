@@ -7,6 +7,7 @@ import {
   Crimson_Text,
 } from "next/font/google";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import FacebookPixelClient from "@/components/FacebookPixelClient";
 import "./globals.css";
 
 // Primary sans-serif font - Modern, clean, highly readable
@@ -151,6 +152,7 @@ export default function RootLayout({
         <GoogleAnalytics
           gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ""}
         />
+        <FacebookPixelClient />
 
         {children}
       </body>

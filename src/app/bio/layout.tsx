@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import FacebookPixelClient from "@/components/FacebookPixelClient";
 import "../globals.css";
 
 const inter = Inter({
@@ -83,6 +84,7 @@ export default function BioLayout({ children }: { children: React.ReactNode }) {
         <GoogleAnalytics
           gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ""}
         />
+        <FacebookPixelClient />
         {children}
       </body>
     </html>
