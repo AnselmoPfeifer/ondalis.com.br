@@ -151,10 +151,7 @@ export default function RootLayout({
         <GoogleAnalytics
           gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ""}
         />
-        {/* Additional GTag ID if needed */}
-        {process.env.NEXT_PUBLIC_GTAG && (
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GTAG} />
-        )}
+
         {children}
       </body>
     </html>

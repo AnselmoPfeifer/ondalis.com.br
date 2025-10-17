@@ -83,10 +83,6 @@ export default function BioLayout({ children }: { children: React.ReactNode }) {
         <GoogleAnalytics
           gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ""}
         />
-        {/* Additional GTag ID if needed */}
-        {process.env.NEXT_PUBLIC_GTAG && (
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GTAG} />
-        )}
         {children}
       </body>
     </html>
