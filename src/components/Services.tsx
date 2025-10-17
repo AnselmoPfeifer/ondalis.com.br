@@ -26,14 +26,14 @@ const Services = () => {
       icon: "🪶",
       comingSoon: false,
     },
-    {
-      title: "Massagem + Liberação Miofascial",
-      description:
-        "Combina a massagem terapêutica com a liberação de pontos de tensão nas fáscias musculares. Ideal para quem sente rigidez, cansaço físico ou pratica atividades intensas. Restaura a mobilidade e reduz dores crônicas.",
-      image: "/images/03.jpg",
-      icon: "⚡",
-      comingSoon: false,
-    },
+    // {
+    //   title: "Massagem + Liberação Miofascial",
+    //   description:
+    //     "Combina a massagem terapêutica com a liberação de pontos de tensão nas fáscias musculares. Ideal para quem sente rigidez, cansaço físico ou pratica atividades intensas. Restaura a mobilidade e reduz dores crônicas.",
+    //   image: "/images/03.jpg",
+    //   icon: "⚡",
+    //   comingSoon: false,
+    // },
     {
       title: "Massagem Relaxante + Pedras Quentes",
       description:
