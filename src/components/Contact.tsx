@@ -3,7 +3,14 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import {
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+} from "lucide-react";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -393,6 +400,32 @@ Aguardo retorno para agendamento. Obrigado!`;
               <div className="space-y-2 text-white/80">
                 <p>Segunda a Sexta: 8h às 19:30h</p>
                 <p>Sábado: 8h às 16h</p>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8">
+              <h4 className="text-xl font-bold text-white mb-4">
+                Redes Sociais
+              </h4>
+              <div className="flex space-x-4">
+                <motion.a
+                  href="https://facebook.com/ondalis.br"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-ondalis-turquoise transition-colors duration-300"
+                >
+                  <Facebook size={20} className="text-white" />
+                </motion.a>
+                <motion.a
+                  href="https://instagram.com/ondalis.br"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-ondalis-turquoise transition-colors duration-300"
+                >
+                  <Instagram size={20} className="text-white" />
+                </motion.a>
               </div>
             </div>
           </motion.div>

@@ -40,14 +40,18 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <motion.a
-                href="#"
+                href="https://facebook.com/ondalis.br"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-ondalis-turquoise transition-colors duration-300"
               >
                 <Facebook size={18} />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://instagram.com/ondalis.br"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-ondalis-turquoise transition-colors duration-300"
               >
