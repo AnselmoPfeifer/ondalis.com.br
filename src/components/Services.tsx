@@ -16,6 +16,7 @@ const Services = () => {
         "Toques suaves e ritmados que aliviam o estresse, reduzem a tensão muscular e promovem equilíbrio entre corpo e mente. Uma experiência perfeita para quem busca tranquilidade e descanso profundo.",
       image: "/images/01.jpg",
       icon: "💆‍♀️",
+      comingSoon: false,
     },
     {
       title: "Massagem Terapêutica",
@@ -23,6 +24,7 @@ const Services = () => {
         "Técnica focada no alívio de dores musculares e tensões localizadas. Utiliza movimentos firmes e precisos para restaurar o equilíbrio corporal, proporcionando bem-estar e leveza imediata.",
       image: "/images/02.jpg",
       icon: "🪶",
+      comingSoon: false,
     },
     {
       title: "Massagem + Liberação Miofascial",
@@ -30,6 +32,7 @@ const Services = () => {
         "Combina a massagem terapêutica com a liberação de pontos de tensão nas fáscias musculares. Ideal para quem sente rigidez, cansaço físico ou pratica atividades intensas. Restaura a mobilidade e reduz dores crônicas.",
       image: "/images/03.jpg",
       icon: "⚡",
+      comingSoon: false,
     },
     {
       title: "Massagem Relaxante + Pedras Quentes",
@@ -37,6 +40,15 @@ const Services = () => {
         "O calor das pedras vulcânicas aliado a toques relaxantes promove uma sensação única de conforto e renovação. Essa técnica estimula a circulação, alivia tensões e equilibra as energias do corpo.",
       image: "/images/04.jpg",
       icon: "🔥",
+      comingSoon: false,
+    },
+    {
+      title: "Massagem Relaxante com Pindas Chinesas",
+      description:
+        "Técnica milenar oriental que utiliza saquinhos de ervas medicinais aquecidos. O calor terapêutico combinado com movimentos suaves promove relaxamento profundo, alivia tensões e melhora a circulação, proporcionando bem-estar e equilíbrio.",
+      image: "/images/07.jpg",
+      icon: "🍃",
+      comingSoon: false,
     },
     {
       title: "Head Massage (Cabeça e Cervical)",
@@ -44,6 +56,7 @@ const Services = () => {
         "Terapia focada na cabeça, couro cabeludo e região cervical. Melhora a circulação, reduz o cansaço mental e promove clareza e leveza — perfeita para quem busca aliviar o estresse do dia a dia.",
       image: "/images/05.png",
       icon: "🧘",
+      comingSoon: true,
     },
     {
       title: "Ondalis Experience (Exclusiva)",
@@ -51,6 +64,7 @@ const Services = () => {
         "A experiência assinatura do SPA Ondalis. Uma combinação harmoniosa de técnicas relaxantes, aromaterapia e cuidado personalizado. Um ritual completo de renovação e equilíbrio para corpo, mente e alma.",
       image: "/images/06.png",
       icon: "🌊",
+      comingSoon: true,
     },
   ];
 
@@ -93,6 +107,11 @@ const Services = () => {
                   <div className="absolute top-4 right-4 text-3xl">
                     {service.icon}
                   </div>
+                  {service.comingSoon && (
+                    <div className="absolute top-4 left-4 bg-gradient-to-r from-ondalis-turquoise to-ondalis-ocean text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg">
+                      Em Breve 🔜
+                    </div>
+                  )}
                 </div>
 
                 <div className="p-6">

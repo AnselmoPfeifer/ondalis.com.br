@@ -178,6 +178,9 @@ Aguardo retorno para agendamento. Obrigado!`;
                   <option value="Massagem Relaxante Corporal">
                     Massagem Relaxante Corporal
                   </option>
+                  <option value="Massagem Relaxante com Pindas Chinesas">
+                    Massagem Relaxante com Pindas Chinesas
+                  </option>
                   <option value="Massagem Terapêutica">
                     Massagem Terapêutica
                   </option>
@@ -187,11 +190,11 @@ Aguardo retorno para agendamento. Obrigado!`;
                   <option value="Massagem Relaxante + Pedras Quentes">
                     Massagem Relaxante + Pedras Quentes
                   </option>
-                  <option value="Head Massage (Cabeça e Cervical)">
-                    Head Massage (Cabeça e Cervical)
+                  <option value="Head Massage (Cabeça e Cervical) - Em Breve">
+                    Head Massage (Cabeça e Cervical) - Em Breve
                   </option>
-                  <option value="Ondalis Experience (Exclusiva)">
-                    Ondalis Experience (Exclusiva)
+                  <option value="Ondalis Experience (Exclusiva) - Em Breve">
+                    Ondalis Experience (Exclusiva) - Em Breve
                   </option>
                   <option value="Ainda não sei">Ainda não sei</option>
                 </select>
