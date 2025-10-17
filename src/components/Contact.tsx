@@ -17,20 +17,117 @@ const Contact = () => {
     goal: "",
   });
 
+  const [errors, setErrors] = useState({
+    email: "",
+    phone: "",
+  });
+
+  // Função para validar email
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // Função para formatar telefone brasileiro
+  const formatPhone = (value: string) => {
+    // Remove todos os caracteres não numéricos
+    const numbers = value.replace(/\D/g, "");
+
+    // Se não tem números, retorna vazio
+    if (numbers.length === 0) {
+      return "";
+    }
+
+    // Se tem apenas DDD (2 dígitos)
+    if (numbers.length <= 2) {
+      return `(${numbers}`;
+    }
+
+    // Se tem DDD completo mas ainda não tem número
+    if (numbers.length <= 6) {
+      const ddd = numbers.slice(0, 2);
+      const phoneStart = numbers.slice(2);
+      return `(${ddd}) ${phoneStart}`;
+    }
+
+    // Formatação completa: (67) 9999-9999 ou (67) 99999-9999
+    const ddd = numbers.slice(0, 2);
+
+    if (numbers.length <= 10) {
+      // Formato antigo: (67) 9999-9999
+      const phonePart1 = numbers.slice(2, 6);
+      const phonePart2 = numbers.slice(6, 10);
+      return `(${ddd}) ${phonePart1}${phonePart2 ? `-${phonePart2}` : ""}`;
+    }
+
+    // Formato com 9 dígitos: (67) 99999-9999
+    const phonePart1 = numbers.slice(2, 7);
+    const phonePart2 = numbers.slice(7, 11);
+    return `(${ddd}) ${phonePart1}-${phonePart2}`;
+  };
+
+  // Função para validar telefone brasileiro
+  const validatePhone = (phone: string) => {
+    // Remove todos os caracteres não numéricos
+    const cleanPhone = phone.replace(/\D/g, "");
+    // Valida se tem 10 ou 11 dígitos (DDD + número)
+    return cleanPhone.length === 10 || cleanPhone.length === 11;
+  };
+
   const handleInputChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+
+    // Aplicar formatação automática para telefone
+    if (name === "phone") {
+      const formattedValue = formatPhone(value);
+      setFormData((prev) => ({ ...prev, [name]: formattedValue }));
+
+      // Validação em tempo real
+      if (value) {
+        setErrors((prev) => ({
+          ...prev,
+          phone: validatePhone(formattedValue)
+            ? ""
+            : "Telefone inválido (formato: (DDD) 9999-9999 ou (DDD) 99999-9999)",
+        }));
+      } else {
+        setErrors((prev) => ({ ...prev, phone: "" }));
+      }
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+
+      // Validação em tempo real para email
+      if (name === "email" && value) {
+        setErrors((prev) => ({
+          ...prev,
+          email: validateEmail(value) ? "" : "Email inválido",
+        }));
+      } else if (name === "email") {
+        setErrors((prev) => ({ ...prev, email: "" }));
+      }
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validação final antes de enviar
+    const emailValid = validateEmail(formData.email);
+    const phoneValid = validatePhone(formData.phone);
+
+    if (!emailValid || !phoneValid) {
+      setErrors({
+        email: !emailValid ? "Email inválido" : "",
+        phone: !phoneValid
+          ? "Telefone inválido (formato: (DDD) 9999-9999 ou (DDD) 99999-9999)"
+          : "",
+      });
+      return;
+    }
 
     const message = `Olá! Gostaria de agendar uma sessão no SPA Ondalis.
 
@@ -49,6 +146,19 @@ Aguardo retorno para agendamento. Obrigado!`;
       process.env.NEXT_PUBLIC_WHATSAPP_URL
     }?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
+
+    // Limpar formulário e erros após envio
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      complaint: "",
+      goal: "",
+    });
+    setErrors({
+      email: "",
+      phone: "",
+    });
   };
 
   return (
@@ -116,9 +226,14 @@ Aguardo retorno para agendamento. Obrigado!`;
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ondalis-turquoise focus:border-transparent transition-all duration-300"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-ondalis-turquoise focus:border-transparent transition-all duration-300 ${
+                    errors.email ? "border-red-500" : "border-gray-300"
+                  }`}
                   placeholder="seu@email.com"
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                )}
               </div>
 
               <div>
@@ -135,9 +250,14 @@ Aguardo retorno para agendamento. Obrigado!`;
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ondalis-turquoise focus:border-transparent transition-all duration-300"
-                  placeholder="(11) 99999-9999"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-ondalis-turquoise focus:border-transparent transition-all duration-300 ${
+                    errors.phone ? "border-red-500" : "border-gray-300"
+                  }`}
+                  placeholder="(67) 99999-9999"
                 />
+                {errors.phone && (
+                  <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                )}
               </div>
 
               <div>
