@@ -37,7 +37,7 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-ondalis-deep/95 backdrop-blur-md shadow-lg"
-          : "bg-ondalis-deep"
+          : "bg-ondalis-deep/95 backdrop-blur-md shadow-lg"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -73,7 +73,7 @@ const Header = () => {
               onClick={() => navigateToSection("booking")}
               className="bg-gradient-to-r from-ondalis-turquoise to-ondalis-ocean text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
-              Agendamento
+              🎯 Agendamento
             </button>
           </div>
 
@@ -106,9 +106,9 @@ const Header = () => {
               ))}
               <button
                 onClick={() => navigateToSection("booking")}
-                className="bg-gradient-to-r from-ondalis-turquoise to-ondalis-ocean text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 mt-2 w-full"
+                className="bg-gradient-to-r from-ondalis-turquoise to-ondalis-ocean text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 mt-2 w-full text-center"
               >
-                Agendamento
+                🎯 Agendamento
               </button>
             </div>
           </div>

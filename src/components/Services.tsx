@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const Services = () => {
   const ref = useRef(null);
@@ -13,48 +14,42 @@ const Services = () => {
       title: "Massagem Relaxante Corporal",
       description:
         "Toques suaves e ritmados que aliviam o estresse, reduzem a tensão muscular e promovem equilíbrio entre corpo e mente. Uma experiência perfeita para quem busca tranquilidade e descanso profundo.",
-      image:
-        "https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/01.jpg",
       icon: "💆‍♀️",
     },
     {
       title: "Massagem Terapêutica",
       description:
         "Técnica focada no alívio de dores musculares e tensões localizadas. Utiliza movimentos firmes e precisos para restaurar o equilíbrio corporal, proporcionando bem-estar e leveza imediata.",
-      image:
-        "https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/02.jpg",
       icon: "🪶",
     },
     {
       title: "Massagem + Liberação Miofascial",
       description:
         "Combina a massagem terapêutica com a liberação de pontos de tensão nas fáscias musculares. Ideal para quem sente rigidez, cansaço físico ou pratica atividades intensas. Restaura a mobilidade e reduz dores crônicas.",
-      image:
-        "https://images.unsplash.com/photo-1519824145371-296894a0daa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/03.jpg",
       icon: "⚡",
     },
     {
       title: "Massagem Relaxante + Pedras Quentes",
       description:
         "O calor das pedras vulcânicas aliado a toques relaxantes promove uma sensação única de conforto e renovação. Essa técnica estimula a circulação, alivia tensões e equilibra as energias do corpo.",
-      image:
-        "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/04.jpg",
       icon: "🔥",
     },
     {
       title: "Head Massage (Cabeça e Cervical)",
       description:
         "Terapia focada na cabeça, couro cabeludo e região cervical. Melhora a circulação, reduz o cansaço mental e promove clareza e leveza — perfeita para quem busca aliviar o estresse do dia a dia.",
-      image:
-        "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/05.png",
       icon: "🧘",
     },
     {
       title: "Ondalis Experience (Exclusiva)",
       description:
         "A experiência assinatura do SPA Ondalis. Uma combinação harmoniosa de técnicas relaxantes, aromaterapia e cuidado personalizado. Um ritual completo de renovação e equilíbrio para corpo, mente e alma.",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/06.png",
       icon: "🌊",
     },
   ];
@@ -86,10 +81,13 @@ const Services = () => {
             >
               <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
+                    width={400}
+                    height={300}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ondalis-deep/80 to-transparent" />
                   <div className="absolute top-4 right-4 text-3xl">
