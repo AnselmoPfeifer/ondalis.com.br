@@ -184,16 +184,22 @@ Aguardo retorno para agendamento. Obrigado!`;
                   <option value="Massagem Terapêutica">
                     Massagem Terapêutica
                   </option>
-                  <option value="Massagem + Liberação Miofascial">
-                    Massagem + Liberação Miofascial
+                  <option value="Liberação Miofascial">
+                    Liberação Miofascial
                   </option>
                   <option value="Massagem Relaxante + Pedras Quentes">
                     Massagem Relaxante + Pedras Quentes
                   </option>
-                  <option value="Head Massage (Cabeça e Cervical) - Em Breve">
+                  <option
+                    value="Head Massage (Cabeça e Cervical) - Em Breve"
+                    disabled
+                  >
                     Head Massage (Cabeça e Cervical) - Em Breve
                   </option>
-                  <option value="Ondalis Experience (Exclusiva) - Em Breve">
+                  <option
+                    value="Ondalis Experience (Exclusiva) - Em Breve"
+                    disabled
+                  >
                     Ondalis Experience (Exclusiva) - Em Breve
                   </option>
                   <option value="Ainda não sei">Ainda não sei</option>
