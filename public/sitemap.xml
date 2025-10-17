@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ondalis.com.br/</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ondalis.com.br/images/social.png</image:loc>
+      <image:title>SPA Ondalis | Massagens e Bem-Estar em Campo Grande - MS</image:title>
+      <image:caption>SPA Ondalis em Campo Grande - MS. Massagens relaxantes, terapêuticas, pedras
+        quentes, reflexologia e muito mais</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ondalis.com.br/#home</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ondalis.com.br/images/social.png</image:loc>
+      <image:title>Home | SPA Ondalis - Equilíbrio e Bem-Estar</image:title>
+      <image:caption>Bem-vindo ao SPA Ondalis - O refúgio ideal para relaxar corpo e mente em Campo
+        Grande - MS</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ondalis.com.br/#about</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ondalis.com.br/images/social.png</image:loc>
+      <image:title>Sobre | SPA Ondalis - Nossa História</image:title>
+      <image:caption>Conheça o SPA Ondalis - Dedicação ao seu bem-estar através de massagens
+        terapêuticas e relaxantes</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ondalis.com.br/#services</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ondalis.com.br/images/social.png</image:loc>
+      <image:title>Serviços | SPA Ondalis - Massagens e Terapias</image:title>
+      <image:caption>Massagem Relaxante, Terapêutica, Liberação Miofascial, Pedras Quentes, Head
+        Massage e Ondalis Experience</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ondalis.com.br/#booking</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://ondalis.com.br/images/social.png</image:loc>
+      <image:title>Agendamento | SPA Ondalis - Agende sua Sessão</image:title>
+      <image:caption>Agende sua sessão de massagem e terapia no SPA Ondalis - Rua Rui Barbosa, 900,
+        Campo Grande - MS</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ondalis.com.br/#contact</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://ondalis.com.br/images/social.png</image:loc>
+      <image:title>Contato | SPA Ondalis - Fale Conosco</image:title>
+      <image:caption>Entre em contato com o SPA Ondalis - Rua Rui Barbosa, 900, Campo Grande - MS.
+        Telefone: (67) 99999-9999</image:caption>
+    </image:image>
+  </url>
+</urlset>

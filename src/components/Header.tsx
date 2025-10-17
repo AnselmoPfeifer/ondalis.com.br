@@ -1,110 +1,120 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
+  const navigateToSection = (sectionId: string) => {
+    setIsMenuOpen(false);
+
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMobileMenuOpen(false);
   };
 
   const navItems = [
     { name: "Home", id: "home" },
     { name: "Sobre", id: "about" },
-    { name: "Serviços", id: "services" },
-    { name: "Agendamento", id: "booking" },
     { name: "Contato", id: "contact" },
+    { name: "Serviços", id: "services" },
   ];
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-ondalis-deep transition-all duration-300"
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-ondalis-deep/95 backdrop-blur-md shadow-lg"
+          : "bg-ondalis-deep"
+      }`}
     >
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4">
+        <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-3 cursor-pointer"
-            onClick={() => scrollToSection("home")}
+          <button
+            onClick={() => navigateToSection("home")}
+            className="flex items-center space-x-3 transition-opacity hover:opacity-80"
           >
             <Image
               src="/images/Ícone-2.png"
               alt="SPA Ondalis Logo"
-              width={100}
-              height={100}
-              className="w-22 h-22 object-contain"
+              width={60}
+              height={60}
+              className="w-16 h-16 object-contain"
+              priority
             />
             <span className="text-xl font-bold text-white">SPA Ondalis</span>
-          </motion.div>
+          </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-ondalis-turquoise transition-colors duration-300 font-medium"
+                onClick={() => navigateToSection(item.id)}
+                className="text-white hover:text-ondalis-turquoise transition-colors font-medium"
               >
                 {item.name}
               </button>
             ))}
-          </nav>
+            <button
+              onClick={() => navigateToSection("booking")}
+              className="bg-gradient-to-r from-ondalis-turquoise to-ondalis-ocean text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Agendamento
+            </button>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 text-white"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isMenuOpen}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-        </div>
+        </nav>
 
         {/* Mobile Navigation */}
-        <motion.div
-          initial={false}
-          animate={{
-            height: isMobileMenuOpen ? "auto" : 0,
-            opacity: isMobileMenuOpen ? 1 : 0,
-          }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden"
-        >
-          <nav className="py-4 space-y-4">
-            {navItems.map((item) => (
+        {isMenuOpen && (
+          <div
+            className="md:hidden bg-ondalis-navy/95 backdrop-blur-md rounded-2xl mt-2 p-4 mb-4"
+            role="navigation"
+          >
+            <div className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => navigateToSection(item.id)}
+                  className="text-white hover:text-ondalis-turquoise transition-colors font-medium text-left"
+                >
+                  {item.name}
+                </button>
+              ))}
               <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left text-white hover:text-ondalis-turquoise transition-colors duration-300 font-medium py-2"
+                onClick={() => navigateToSection("booking")}
+                className="bg-gradient-to-r from-ondalis-turquoise to-ondalis-ocean text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 mt-2 w-full"
               >
-                {item.name}
+                Agendamento
               </button>
-            ))}
-          </nav>
-        </motion.div>
+            </div>
+          </div>
+        )}
       </div>
-    </motion.header>
+    </header>
   );
 };
 

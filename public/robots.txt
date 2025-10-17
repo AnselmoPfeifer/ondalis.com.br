@@ -1,7 +1,7 @@
 User-agent: *
-Disallow: /
+Allow: /
 
 Crawl-delay: 1
 
 # Sitemap
-# Sitemap: https://oncalis.com.br/sitemap.xml
+Sitemap: https://ondalis.com.br/sitemap.xml
