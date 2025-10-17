@@ -43,7 +43,7 @@ const Services = () => {
       comingSoon: false,
     },
     {
-      title: "Massagem Relaxante com Pindas Chinesas",
+      title: "Massagem Relaxante + Pindas Chinesas",
       description:
         "Técnica milenar oriental que utiliza saquinhos de ervas medicinais aquecidos. O calor terapêutico combinado com movimentos suaves promove relaxamento profundo, alivia tensões e melhora a circulação, proporcionando bem-estar e equilíbrio.",
       image: "/images/07.jpg",
