@@ -310,11 +310,8 @@ Aguardo retorno para agendamento. Obrigado!`;
                   <option value="Massagem Relaxante + Pindas Chinesas">
                     Massagem Relaxante + Pindas Chinesas
                   </option>
-                  <option
-                    value="Head Massage (Cabeça e Cervical) - Em Breve"
-                    disabled
-                  >
-                    Head Massage (Cabeça e Cervical) - Em Breve
+                  <option value="Head Massage - Em Breve" disabled>
+                    Head Massage - Em Breve
                   </option>
                   <option
                     value="Ondalis Experience (Exclusiva) - Em Breve"
