@@ -51,7 +51,7 @@ const Services = () => {
       comingSoon: false,
     },
     {
-      title: "Head Massage (Cabeça e Cervical)",
+      title: "Massagem Relaxante + Head Massage",
       description:
         "Terapia focada na cabeça, couro cabeludo e região cervical. Melhora a circulação, reduz o cansaço mental e promove clareza e leveza — perfeita para quem busca aliviar o estresse do dia a dia.",
       image: "/images/05.png",
@@ -59,7 +59,7 @@ const Services = () => {
       comingSoon: true,
     },
     {
-      title: "Ondalis Experience (Exclusiva)",
+      title: "Massagem Relaxante + Ondalis Experience (Exclusiva)",
       description:
         "A experiência assinatura do SPA Ondalis. Uma combinação harmoniosa de técnicas relaxantes, aromaterapia e cuidado personalizado. Um ritual completo de renovação e equilíbrio para corpo, mente e alma.",
       image: "/images/06.png",
