@@ -65,7 +65,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
         >
-          Equilíbrio e bem-estar em cada toque.
+          Onde o corpo descansa e a alma se renova.
         </motion.h1>
 
         <motion.p
@@ -74,7 +74,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl lg:text-2xl mb-8 text-ondalis-turquoise font-light"
         >
-          Descubra o poder do relaxamento no SPA Ondalis.
+          Em cada toque, um convite à tranquilidade e à renovação.
         </motion.p>
 
         <motion.button

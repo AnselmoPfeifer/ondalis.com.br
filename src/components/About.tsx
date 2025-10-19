@@ -19,7 +19,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-ondalis-deep mb-6">
-              Sobre o SPA Ondalis
+              Sobre Nós (Ondalis)
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-ondalis-turquoise to-ondalis-ocean mx-auto rounded-full" />
           </motion.div>
@@ -33,11 +33,10 @@ const About = () => {
               className="space-y-6"
             >
               <p className="text-lg text-ondalis-navy leading-relaxed">
-                O nome Ondalis vem da união de 'onda' — que representa
-                movimento, fluidez e renovação — com 'lis', inspirado na
-                flor-de-lis, símbolo de pureza, equilíbrio e delicadeza. A ideia
-                é transmitir calma, naturalidade e sofisticação, como o fluxo
-                contínuo do mar.
+                O nome Ondalis vem da união de 'onda' que representa movimento,
+                fluidez e renovação com 'lis', inspirado na flor-de-lis, símbolo
+                de pureza, equilíbrio e delicadeza. A ideia é transmitir calma,
+                naturalidade e sofisticação, como o fluxo contínuo do mar.
               </p>
 
               <p className="text-lg text-ondalis-navy leading-relaxed">
