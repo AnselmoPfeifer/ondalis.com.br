@@ -58,14 +58,14 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ondalis.com.br"),
-  title: "SPA Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
+  title: "Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
   description:
-    "O SPA Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, pedras quentes, reflexologia e muito mais em um ambiente de conforto e harmonia. Agende sua experiência Ondalis.",
+    "Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, terapêuticas, pedras quentes e muito mais em um ambiente de conforto e harmonia. Equilíbrio e bem-estar em cada toque.",
   keywords:
-    "SPA Campo Grande MS, massagem relaxante, massagem com pedras quentes, reflexologia podal, bem-estar Campo Grande, relaxamento, spa de luxo, spa Ondalis, spa Campo Grande, Ondalis MS, massagem Campo Grande, terapias Campo Grande, spa MS, relaxamento Campo Grande",
-  authors: [{ name: "SPA Ondalis" }],
-  creator: "SPA Ondalis",
-  publisher: "SPA Ondalis",
+    "Ondalis, massagem Campo Grande MS, massagem relaxante, massagem terapêutica, pedras quentes, liberação miofascial, bem-estar Campo Grande, relaxamento, terapias Campo Grande, massagem MS, Ondalis Campo Grande",
+  authors: [{ name: "Ondalis" }],
+  creator: "Ondalis",
+  publisher: "Ondalis",
   alternates: {
     canonical: "https://ondalis.com.br",
   },
@@ -100,17 +100,17 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon/site.webmanifest",
   openGraph: {
-    title: "SPA Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
+    title: "Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
     description:
-      "O SPA Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, pedras quentes, reflexologia e muito mais em um ambiente de conforto e harmonia. Agende sua experiência Ondalis.",
+      "Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, terapêuticas, pedras quentes e muito mais em um ambiente de conforto e harmonia. Equilíbrio e bem-estar em cada toque.",
     url: "https://ondalis.com.br",
-    siteName: "SPA Ondalis",
+    siteName: "Ondalis",
     images: [
       {
         url: "https://ondalis.com.br/images/social.png",
         width: 1200,
         height: 630,
-        alt: "SPA Ondalis Campo Grande MS - Massagens e Bem-estar",
+        alt: "Ondalis Campo Grande MS - Massagens e Bem-estar",
         type: "image/png",
       },
     ],
@@ -119,19 +119,18 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SPA Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
+    title: "Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
     description:
-      "O SPA Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, pedras quentes, reflexologia e muito mais em um ambiente de conforto e harmonia. Agende sua experiência Ondalis.",
+      "Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, terapêuticas, pedras quentes e muito mais em um ambiente de conforto e harmonia. Equilíbrio e bem-estar em cada toque.",
     images: ["/images/social.png"],
-    creator: "@spaondalis",
-    site: "@spaondalis",
+    creator: "@ondalis.br",
+    site: "@ondalis.br",
   },
   other: {
-    "linkedin:owner": "spa-ondalis",
-    "linkedin:title":
-      "SPA Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
+    "linkedin:owner": "ondalis",
+    "linkedin:title": "Ondalis | Massagens e Bem-Estar em Campo Grande - MS",
     "linkedin:description":
-      "O SPA Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, pedras quentes, reflexologia e muito mais em um ambiente de conforto e harmonia. Agende sua experiência Ondalis.",
+      "Ondalis é o refúgio ideal para relaxar corpo e mente em Campo Grande - MS. Experimente massagens relaxantes, terapêuticas, pedras quentes e muito mais em um ambiente de conforto e harmonia. Equilíbrio e bem-estar em cada toque.",
     "linkedin:image": "/images/social.png",
   },
 };

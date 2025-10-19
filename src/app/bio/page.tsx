@@ -3,11 +3,11 @@ import BioLayout from "@/components/bio/BioLayout";
 import BioCard from "@/components/bio/BioCard";
 
 export const metadata = {
-  title: "Bio | SPA Ondalis - Links Diretos",
+  title: "Bio | Ondalis - Links Diretos",
   description:
-    "Acesso rápido aos nossos serviços de massagens e bem-estar. Relaxamento, terapia, pedras quentes e muito mais em Campo Grande - MS.",
+    "Acesso rápido aos nossos serviços de massagens e bem-estar. Relaxamento, terapia, pedras quentes e muito mais em Campo Grande - MS. Equilíbrio e bem-estar em cada toque.",
   keywords:
-    "spa ondalis, massagem, relaxamento, bem-estar, instagram bio, contato direto, Campo Grande MS",
+    "ondalis, massagem, relaxamento, bem-estar, instagram bio, contato direto, Campo Grande MS",
 };
 
 const bioLinks = [
@@ -46,7 +46,7 @@ const bioLinks = [
     color: "",
     href:
       process.env.NEXT_PUBLIC_WHATSAPP_URL ||
-      "https://wa.me/5567999999999?text=Olá! Vim pela bio do Instagram do SPA Ondalis.",
+      "https://wa.me/5567999999999?text=Olá! Vim pela bio do Instagram da Ondalis.",
     external: true,
   },
   {

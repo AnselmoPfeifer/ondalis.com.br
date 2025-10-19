@@ -16,14 +16,14 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ondalis.com.br"),
-  title: "Bio | SPA Ondalis - Links Diretos para Serviços",
+  title: "Bio | Ondalis - Links Diretos para Serviços",
   description:
-    "Links diretos para agendamento e serviços do SPA Ondalis. Massagens relaxantes, terapêuticas, pedras quentes e muito mais em Campo Grande - MS.",
+    "Links diretos para agendamento e serviços Ondalis. Massagens relaxantes, terapêuticas, pedras quentes e muito mais em Campo Grande - MS. Equilíbrio e bem-estar em cada toque.",
   keywords:
-    "spa ondalis, massagem, relaxamento, bem-estar, instagram bio, contato direto, whatsapp, Campo Grande MS",
-  authors: [{ name: "SPA Ondalis" }],
-  creator: "SPA Ondalis",
-  publisher: "SPA Ondalis",
+    "ondalis, massagem, relaxamento, bem-estar, instagram bio, contato direto, whatsapp, Campo Grande MS",
+  authors: [{ name: "Ondalis" }],
+  creator: "Ondalis",
+  publisher: "Ondalis",
   alternates: {
     canonical: "https://ondalis.com.br/bio",
   },
@@ -39,17 +39,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Bio | SPA Ondalis - Links Diretos para Serviços",
+    title: "Bio | Ondalis - Links Diretos para Serviços",
     description:
-      "Acesso direto aos nossos serviços de massagens e bem-estar. Relaxamento, terapia, pedras quentes e experiências exclusivas.",
+      "Acesso direto aos nossos serviços de massagens e bem-estar. Relaxamento, terapia, pedras quentes e experiências exclusivas. Equilíbrio e bem-estar em cada toque.",
     url: "https://ondalis.com.br/bio",
-    siteName: "SPA Ondalis",
+    siteName: "Ondalis",
     images: [
       {
         url: "https://ondalis.com.br/images/social.png",
         width: 1200,
         height: 630,
-        alt: "SPA Ondalis - Massagens e Bem-estar em Campo Grande - MS",
+        alt: "Ondalis - Massagens e Bem-estar em Campo Grande - MS",
         type: "image/png",
       },
     ],
@@ -58,18 +58,18 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bio | SPA Ondalis - Links Diretos para Serviços",
+    title: "Bio | Ondalis - Links Diretos para Serviços",
     description:
-      "Acesso direto aos nossos serviços de massagens e bem-estar. Relaxamento, terapia, pedras quentes e experiências exclusivas.",
+      "Acesso direto aos nossos serviços de massagens e bem-estar. Relaxamento, terapia, pedras quentes e experiências exclusivas. Equilíbrio e bem-estar em cada toque.",
     images: ["https://ondalis.com.br/images/social.png"],
-    creator: "@spaondalis",
-    site: "@spaondalis",
+    creator: "@ondalis.br",
+    site: "@ondalis.br",
   },
   other: {
-    "linkedin:owner": "spa-ondalis",
-    "linkedin:title": "Bio | SPA Ondalis - Links Diretos para Serviços",
+    "linkedin:owner": "ondalis",
+    "linkedin:title": "Bio | Ondalis - Links Diretos para Serviços",
     "linkedin:description":
-      "Acesso direto aos nossos serviços de massagens e bem-estar. Relaxamento, terapia, pedras quentes e experiências exclusivas.",
+      "Acesso direto aos nossos serviços de massagens e bem-estar. Relaxamento, terapia, pedras quentes e experiências exclusivas. Equilíbrio e bem-estar em cada toque.",
     "linkedin:image": "https://ondalis.com.br/images/social.png",
   },
 };
