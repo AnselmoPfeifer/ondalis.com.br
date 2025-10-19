@@ -33,10 +33,11 @@ const About = () => {
               className="space-y-6"
             >
               <p className="text-lg text-ondalis-navy leading-relaxed">
-                No SPA Ondalis, acreditamos que o bem-estar é uma jornada de
-                autoconhecimento e cuidado. Nosso espaço foi criado para ser um
-                refúgio de tranquilidade, onde cada detalhe foi pensado para
-                proporcionar uma experiência única de relaxamento e renovação.
+                O nome Ondalis vem da união de 'onda' — que representa
+                movimento, fluidez e renovação — com 'lis', inspirado na
+                flor-de-lis, símbolo de pureza, equilíbrio e delicadeza. A ideia
+                é transmitir calma, naturalidade e sofisticação, como o fluxo
+                contínuo do mar.
               </p>
 
               <p className="text-lg text-ondalis-navy leading-relaxed">
