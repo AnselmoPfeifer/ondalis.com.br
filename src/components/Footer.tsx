@@ -26,12 +26,18 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <Image
                 src="/images/Ícone-2.png"
-                alt="SPA Ondalis Logo"
-                width={50}
-                height={50}
-                className="w-12 h-12 object-contain"
+                alt="SPA Ondalis Logo Icon"
+                width={60}
+                height={60}
+                className="w-16 h-16 object-contain"
               />
-              <span className="text-xl font-bold">SPA Ondalis</span>
+              <Image
+                src="/images/Nome-2.png"
+                alt="SPA Ondalis Name"
+                width={150}
+                height={40}
+                className="h-8 w-auto object-contain"
+              />
             </div>
             <p className="text-white/80 leading-relaxed mb-6">
               Equilíbrio e bem-estar em cada toque. Descubra o poder do
