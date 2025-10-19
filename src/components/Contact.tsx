@@ -136,7 +136,7 @@ const Contact = () => {
       return;
     }
 
-    const message = `Olá! Gostaria de agendar uma sessão no SPA Ondalis.
+    const message = `Olá! Gostaria de agendar uma sessão na Ondalis.
 
 *Dados do Cliente:*
 Nome: ${formData.name}

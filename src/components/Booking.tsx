@@ -2,20 +2,57 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
+import SuccessModal from "./SuccessModal";
 
 const Booking = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: "avaliacao" });
+      const cal = await getCalApi({ namespace: "agenda" });
       cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+
+      // Listener para detectar quando o agendamento é concluído
+      cal("on", {
+        action: "bookingSuccessful",
+        callback: (e: any) => {
+          console.log("Booking successful!", e);
+          // Adicionar ?success=true na URL
+          if (typeof window !== "undefined") {
+            const url = new URL(window.location.href);
+            url.searchParams.set("success", "true");
+            window.history.pushState({}, "", url.toString());
+          }
+          setShowSuccessModal(true);
+        },
+      });
     })();
   }, []);
+
+  // Verificar se a URL tem o parâmetro ?success ao carregar
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("success") === "true") {
+        setShowSuccessModal(true);
+      }
+    }
+  }, []);
+
+  // Função para fechar o modal e limpar a URL
+  const handleCloseModal = () => {
+    setShowSuccessModal(false);
+    // Remover o parâmetro ?success da URL
+    if (typeof window !== "undefined") {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("success");
+      window.history.replaceState({}, "", url.toString());
+    }
+  };
 
   return (
     <section
@@ -107,6 +144,9 @@ const Booking = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Success Modal */}
+      <SuccessModal isOpen={showSuccessModal} onClose={handleCloseModal} />
     </section>
   );
 };
