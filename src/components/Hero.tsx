@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import Image from "next/image";
 
 const Hero = () => {
   const scrollToBooking = () => {
@@ -30,6 +31,34 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            y: [0, -10, 0],
+          }}
+          transition={{
+            opacity: { duration: 0.8 },
+            scale: { duration: 0.8 },
+            y: {
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+          }}
+          className="flex justify-center mb-8"
+        >
+          <Image
+            src="/images/Ícone-2.png"
+            alt="SPA Ondalis Icon"
+            width={200}
+            height={200}
+            className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-contain"
+            priority
+          />
+        </motion.div>
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

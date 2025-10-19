@@ -49,13 +49,20 @@ const Header = () => {
           >
             <Image
               src="/images/Ícone-2.png"
-              alt="SPA Ondalis Logo"
+              alt="SPA Ondalis Logo Icon"
               width={60}
               height={60}
               className="w-16 h-16 object-contain"
               priority
             />
-            <span className="text-xl font-bold text-white">SPA Ondalis</span>
+            <Image
+              src="/images/Nome-2.png"
+              alt="SPA Ondalis Name"
+              width={150}
+              height={40}
+              className="h-8 w-auto object-contain"
+              priority
+            />
           </button>
 
           {/* Desktop Navigation */}
