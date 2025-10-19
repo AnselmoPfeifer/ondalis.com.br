@@ -68,7 +68,7 @@ const Booking = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-ondalis-deep mb-6">
-            Reserve seu momento para Relaxar, corpo e mente. 
+            Reserve um horário só seu para relaxar e renovar suas energias.
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-ondalis-turquoise to-ondalis-ocean mx-auto rounded-full mb-8" />
           <p className="text-lg text-ondalis-night max-w-2xl mx-auto">
