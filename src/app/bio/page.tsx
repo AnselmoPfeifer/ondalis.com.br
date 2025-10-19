@@ -55,7 +55,7 @@ const bioLinks = [
     description: "",
     icon: "📍",
     color: "",
-    href: "https://maps.google.com/?q=Rua+Rui+Barbosa+900+Campo+Grande+MS",
+    href: "#", //"https://maps.google.com/?q=Rua+Rui+Barbosa+900+Campo+Grande+MS",
     external: true,
   },
 ];

@@ -384,7 +384,7 @@ Aguardo retorno para agendamento. Obrigado!`;
                   <div>
                     <p className="text-white/80">Endereço</p>
                     <p className="text-white font-semibold">
-                      Rua Rui Barbosa, 900
+                      Rua Rui Barbosa
                       <br />
                       Campo Grande - MS
                     </p>

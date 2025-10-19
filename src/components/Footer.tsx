@@ -130,7 +130,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="text-ondalis-turquoise mt-1" />
                 <div className="text-white/80">
-                  <p>Rua Rui Barbosa, 900</p>
+                  <p>Rua Rui Barbosa</p>
                   <p>Campo Grande - MS</p>
                 </div>
               </div>
