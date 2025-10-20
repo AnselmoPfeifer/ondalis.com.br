@@ -33,18 +33,25 @@ const About = () => {
               className="space-y-6"
             >
               <p className="text-lg text-ondalis-navy leading-relaxed">
-                O nome Ondalis vem da união de 'onda' que representa movimento,
-                fluidez e renovação com 'lis', inspirado na flor-de-lis, símbolo
-                de pureza, equilíbrio e delicadeza. A ideia é transmitir calma,
-                naturalidade e sofisticação, como o fluxo contínuo do mar.
+                Ondalis nasce da fusão entre duas ideias universais: 'Onda'
+                símbolo do movimento natural da vida, das águas, da energia que
+                flui em constante transformação.
               </p>
-
               <p className="text-lg text-ondalis-navy leading-relaxed">
-                Nossa filosofia se baseia na harmonia entre corpo e mente,
-                utilizando técnicas milenares de massoterapia combinadas com um
-                ambiente acolhedor e profissionais altamente qualificados.
+                E 'Lis', termo de origem latina e francesa que remete à pureza e
+                harmonia (como no “Lírio”, flor associada à renovação e
+                serenidade).
               </p>
-
+              <p className="text-lg text-ondalis-navy leading-relaxed">
+                Juntas, essas forças representam o propósito da marca: trazer
+                equilíbrio, fluidez e leveza, conduzindo cada pessoa de volta ao
+                seu estado natural de bem-estar.
+              </p>
+              <p className="text-lg text-ondalis-navy leading-relaxed">
+                Assim, Ondalis não é apenas um nome é um convite. Um convite
+                para se deixar levar pelo movimento das ondas internas,
+                redescobrir o silêncio do corpo e o fluxo tranquilo da mente.
+              </p>
               <div className="grid md:grid-cols-2 gap-6 mt-8">
                 <div className="text-center p-6 bg-ondalis-deep/5 rounded-xl">
                   <div className="w-16 h-16 bg-gradient-to-br from-ondalis-turquoise to-ondalis-ocean rounded-full flex items-center justify-center mx-auto mb-4">
@@ -84,7 +91,7 @@ const About = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Ambiente relaxante do SPA Ondalis"
+                  alt="Ambiente relaxante do Ondalis"
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ondalis-deep/30 to-transparent" />
