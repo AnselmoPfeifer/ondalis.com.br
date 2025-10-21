@@ -141,9 +141,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="overflow-x-hidden">
       <body
-        className={`${inter.variable} ${playfair.variable} ${poppins.variable} ${sourceSans.variable} ${crimsonText.variable}`}
+        className={`${inter.variable} ${playfair.variable} ${poppins.variable} ${sourceSans.variable} ${crimsonText.variable} overflow-x-hidden w-full`}
       >
         <GoogleTagManager
           gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID ?? ""}
@@ -152,7 +152,6 @@ export default function RootLayout({
           gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ""}
         />
         <FacebookPixelClient />
-
         {children}
       </body>
     </html>
