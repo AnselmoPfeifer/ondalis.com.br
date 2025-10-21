@@ -388,6 +388,9 @@ Aguardo retorno para agendamento. Obrigado!`;
                       <br />
                       Campo Grande - MS
                     </p>
+                    <p className="text-ondalis-turquoise/90 text-sm mt-1 italic">
+                      * Endereço completo será divulgado em breve
+                    </p>
                   </div>
                 </div>
               </div>
