@@ -55,11 +55,7 @@ const Booking = () => {
   };
 
   return (
-    <section
-      id="booking"
-      ref={ref}
-      className="py-20 bg-gradient-to-b from-ondalis-deep/5 to-white"
-    >
+    <section id="booking" ref={ref} className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
