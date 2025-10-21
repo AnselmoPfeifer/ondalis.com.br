@@ -14,7 +14,11 @@ const Booking = () => {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "agenda" });
-      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+      cal("ui", {
+        hideEventTypeDetails: false,
+        layout: "month_view",
+        theme: "light",
+      });
 
       // Listener para detectar quando o agendamento é concluído
       cal("on", {
@@ -91,7 +95,10 @@ const Booking = () => {
                   ) || "ondalis"
                 }
                 style={{ width: "100%", height: "100%", overflow: "scroll" }}
-                config={{ layout: "month_view" }}
+                config={{
+                  layout: "month_view",
+                  theme: "light",
+                }}
               />
             </div>
           </div>
