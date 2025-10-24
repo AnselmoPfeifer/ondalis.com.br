@@ -41,8 +41,8 @@ const Footer = () => {
             </div>
             <p className="text-white/80 leading-relaxed mb-6">
               Equilíbrio e bem-estar em cada toque. Descubra o poder do
-              relaxamento no SPA Ondalis, onde renovamos corpo e mente através
-              do toque e da calma.
+              relaxamento no Ondalis, onde renovamos corpo e mente através do
+              toque e da calma.
             </p>
             <div className="flex space-x-4">
               <motion.a
@@ -127,16 +127,23 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-ondalis-turquoise" />
-                <span className="text-white/80">(67) 99999-9999</span>
+                <a
+                  href="https://wa.me/5567981079935?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20Contato%20do%20Site%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20Massagens%21"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-ondalis-turquoise transition-colors"
+                >
+                  (67) 9 8107-9935
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-ondalis-turquoise" />
-                <span className="text-white/80">contato@ondalis.com.br</span>
+                <span className="text-white/80">ondalis.br@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="text-ondalis-turquoise mt-1" />
                 <div className="text-white/80">
-                  <p>Rua Rui Barbosa</p>
+                  <p>Rua Rui Barbosa 900 Loja 9</p>
                   <p>Campo Grande - MS</p>
                 </div>
               </div>

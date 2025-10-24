@@ -361,7 +361,14 @@ Aguardo retorno para agendamento. Obrigado!`;
                   </div>
                   <div>
                     <p className="text-white/80">Telefone</p>
-                    <p className="text-white font-semibold">(67) 99999-9999</p>
+                    <a
+                      href="https://wa.me/5567981079935?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20Contato%20do%20Site%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20Massagens%21"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white font-semibold hover:text-ondalis-turquoise transition-colors"
+                    >
+                      (67) 9 8107-9935
+                    </a>
                   </div>
                 </div>
 
@@ -372,7 +379,7 @@ Aguardo retorno para agendamento. Obrigado!`;
                   <div>
                     <p className="text-white/80">E-mail</p>
                     <p className="text-white font-semibold">
-                      contato@ondalis.com.br
+                      ondalis.br@gmail.com
                     </p>
                   </div>
                 </div>
@@ -384,12 +391,9 @@ Aguardo retorno para agendamento. Obrigado!`;
                   <div>
                     <p className="text-white/80">Endereço</p>
                     <p className="text-white font-semibold">
-                      Rua Rui Barbosa
+                      Rua Rui Barbosa 900, Loja 9
                       <br />
                       Campo Grande - MS
-                    </p>
-                    <p className="text-ondalis-turquoise/90 text-sm mt-1 italic">
-                      * Endereço completo será divulgado em breve
                     </p>
                   </div>
                 </div>

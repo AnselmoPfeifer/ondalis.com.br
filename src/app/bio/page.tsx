@@ -17,7 +17,7 @@ const bioLinks = [
     description: "",
     icon: "🌊",
     color: "",
-    href: "https://ondalis.com.br",
+    href: "/",
     external: false,
   },
   {
@@ -26,7 +26,7 @@ const bioLinks = [
     description: "",
     icon: "📅",
     color: "",
-    href: "https://ondalis.com.br/#booking",
+    href: "/#booking",
     external: false,
   },
   {
@@ -35,7 +35,7 @@ const bioLinks = [
     description: "",
     icon: "✨",
     color: "",
-    href: "https://ondalis.com.br/#services",
+    href: "/#services",
     external: false,
   },
   {
@@ -44,9 +44,7 @@ const bioLinks = [
     description: "",
     icon: "💬",
     color: "",
-    href:
-      process.env.NEXT_PUBLIC_WHATSAPP_URL ||
-      "https://wa.me/5567999999999?text=Olá! Vim pela bio do Instagram da Ondalis.",
+    href: "https://wa.me/5567981079935?text=Ol%C3%A1%21%20Vim%20pela%20bio%20do%20Instagram%20da%20Ondalis.",
     external: true,
   },
   {
@@ -55,7 +53,7 @@ const bioLinks = [
     description: "",
     icon: "📍",
     color: "",
-    href: "#", //"https://maps.google.com/?q=Rua+Rui+Barbosa+900+Campo+Grande+MS",
+    href: "https://maps.app.goo.gl/Tj1BU86hDKyUViPx6",
     external: true,
   },
 ];
